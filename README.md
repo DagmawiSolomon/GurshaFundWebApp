@@ -1,1 +1,1 @@
-"# GurshaFundWebApp" 
+# GurshaFundWebApp
