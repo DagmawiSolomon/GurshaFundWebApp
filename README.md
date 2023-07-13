@@ -1,5 +1,5 @@
 # GurshaFundWebApp
-<<<<<<< HEAD
+
 
 GurshaFundWebApp is a Django web application built for a hackathon to digitalize how people donate money to social causes and raise funds.
 
@@ -53,5 +53,3 @@ GurshaFundWebApp allows users to donate money to social causes and raise funds. 
 - Create fundraising campaigns and share them with others.
 - Track and manage donations and funds raised.
 
-=======
->>>>>>> d33c4dc6bb8b49523eda7abcb98121304b8c052c
