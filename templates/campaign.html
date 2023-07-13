@@ -1,0 +1,46 @@
+ {% extends "_base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<style>
+.pointer-events-none.absolute.inset-y-0.right-0.flex.items-center.px-2.text-gray-700 {
+    display: none;
+}
+</style>
+<section class="bg-white dark:bg-gray-900">
+  <div class=" px-4 mx-auto max-w-2xl ">
+      <h1 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white">Add a campaign</h1>
+      <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+          <div class="grid gap-4 sm:grid-cols-2 sm:gap-6 mb-4">
+              <div class="sm:col-span-2">
+                  {{form.title|as_crispy_field}}
+              </div>
+              <div class="w-full">
+                  {{form.state|as_crispy_field}}
+              </div>
+              <div class="w-full">
+                 {{form.city|as_crispy_field}}
+              </div>
+              <div class="w-full">     
+                {{form.recipent|as_crispy_field}}
+                </div>
+                <div class="w-full">     
+                {{form.category|as_crispy_field}}
+                </div>
+        </div>
+            <div class="sm:col-span-2 mt-2">
+                 {{form.image|as_crispy_field}}
+              </div>
+              <div class="sm:col-span-2 mt-2">
+                 {{form.goal|as_crispy_field}}
+              </div>
+               <button type="submit" class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
+              Add campaign
+          </button>
+          </div>
+         
+      </form>
+  </div>
+</section>
+{% endblock content %}
